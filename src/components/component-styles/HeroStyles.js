@@ -2,9 +2,16 @@
 
 import styled from 'styled-components';
 
+export const OutWrapper = styled.div`
+	width: 100%;
+	height: fit-content;
+	overflow: hidden;
+	margin: 0 0 100px;
+`;
+
 export const Wrapper = styled.div`
-	max-width: 85%;
-	margin: 0 0 0 4.75vw;
+	max-width: 100%;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -21,6 +28,7 @@ export const Wrapper = styled.div`
 	}
 
 	@media (min-width: 768px) {
+		max-width: 85%;
 		margin: 50px auto 0;
 		align-items: center;
 		flex-wrap: wrap;
@@ -40,6 +48,7 @@ export const Wrapper = styled.div`
 
 export const TextWrapper = styled.div`
 	display: block;
+	margin: 0 auto;
 `;
 
 export const HeroTextDiv = styled.div`
@@ -80,7 +89,7 @@ export const Heading = styled.h1`
 export const Subheading = styled.h3`
 	font-weight: 500;
 	font-size: 14px;
-	margin: 0 15px 30px;
+	margin: 0 30px 30px;
 	color: ${(props) => props.theme.grayishViolet};
 
 	@media (min-width: 576px) {
@@ -124,17 +133,23 @@ export const Button = styled.button`
 export const HeroImageDiv = styled.div`
 	width: 100%;
 	text-align: center;
-	margin: 0 auto 25px;
+	margin: 0 auto 35px;
+	overflow: hidden;
+	position: relative;
 
 	@media (min-width: 768px) {
 		width: 45%;
 		margin: 0;
+		overflow: visible;
 	}
 `;
 
 export const HeroImage = styled.img`
 	width: 350px;
 	margin-left: 20px;
+	positon: absolute;
+	left: 0;
+	top: 0;
 
 	@media (min-width: 576px) {
 		width: 400px;

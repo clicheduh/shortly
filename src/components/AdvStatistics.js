@@ -1,4 +1,19 @@
 import React from 'react';
+import {
+	OuterDiv,
+	Wrapper,
+	Heading,
+	Subheading,
+	Cards,
+	Card,
+	CardImage,
+	CardHeading,
+	CardText,
+	ImageDiv,
+	Line
+} from './component-styles/AdvStatisticsStyles';
+
+const imageRoot = process.env.PUBLIC_URL + '/images';
 
 const AdvStatistics = () => {
 	return (
@@ -10,8 +25,14 @@ const AdvStatistics = () => {
 					advanced statistics dashboard
 				</Subheading>
 				<Cards>
+					<Line></Line>
 					<Card>
-						<CardImage></CardImage>
+						<ImageDiv>
+							<CardImage
+								src={imageRoot + '/icon-brand-recognition.svg'}
+								alt="hero-image"
+							></CardImage>
+						</ImageDiv>
 						<CardHeading>Brand recognition</CardHeading>
 						<CardText>
 							Boost your brand recognition with each click.
@@ -19,8 +40,13 @@ const AdvStatistics = () => {
 							instil confidence in your content.
 						</CardText>
 					</Card>
-					<Card>
-						<CardImage></CardImage>
+					<Card style={{ margin: '30px 0 0' }}>
+						<ImageDiv>
+							<CardImage
+								src={imageRoot + '/icon-detailed-records.svg'}
+								alt="hero-image"
+							></CardImage>
+						</ImageDiv>
 						<CardHeading>Detailed records</CardHeading>
 						<CardText>
 							Gain insights into who is clicking your links.
@@ -28,8 +54,13 @@ const AdvStatistics = () => {
 							content helps inform better decisions.
 						</CardText>
 					</Card>
-					<Card>
-						<CardImage></CardImage>
+					<Card style={{ margin: '60px 0 0' }}>
+						<ImageDiv>
+							<CardImage
+								src={imageRoot + '/icon-fully-customizable.svg'}
+								alt="hero-image"
+							></CardImage>
+						</ImageDiv>
 						<CardHeading>Fully customizable</CardHeading>
 						<CardText>
 							Improve brand awareness and content dicoverability

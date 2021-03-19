@@ -6,7 +6,7 @@ export const darkViolet = '#3b3054';
 export const red = '#f46262';
 
 // Neutral Colors
-export const gray = '#bfbfbf';
+export const gray = '#efefef';
 export const grayishViolet = '#9e9aa7';
 export const veryDarkBlue = '#35323e';
 export const veryDarkViolet = '#232127';
