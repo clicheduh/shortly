@@ -8,6 +8,14 @@ export const OuterDiv = styled.div`
 	height: fit-content;
 	padding: 0 0 100px;
 	margin: 700px 0 0;
+
+	@media (min-width: 576px) {
+		margin: 750px 0 0;
+	}
+
+	@media (min-width: 768px) {
+		margin: 50px 0 0;
+	}
 `;
 
 export const Wrapper = styled.div`
@@ -48,7 +56,7 @@ export const Subheading = styled.h3`
 
 	@media (min-width: 576px) {
 		font-size: 16px;
-		margin: 0 0 30px;
+		margin: 0 0 60px;
 		padding: 0 50px;
 	}
 
@@ -73,21 +81,25 @@ export const Cards = styled.div`
 	height: fit-content;
 	position: relative;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		flex-flow: row;
 	}
 `;
 
 export const Line = styled.div`
-	width: 100%;
+	width: 75%;
 	height: 8px;
 	background-color: ${(props) => props.theme.cyan};
 	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	top: 120px;
 	z-index: 0;
 	display: none;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		display: block;
 	}
 `;
@@ -97,12 +109,14 @@ export const MobileLine = styled.div`
 	height: 70%;
 	background-color: ${(props) => props.theme.cyan};
 	position: absolute;
-	top: 120px;
-	left: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 	z-index: 0;
 	display: block;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		display: none;
 	}
 `;
@@ -111,25 +125,33 @@ export const Card = styled.div`
 	background-color: #fff;
 	margin: 0 0 75px;
 	width: 100%;
-	height: 230px;
-	padding: 70px 26px 35px;
+	height: fit-content;
+	padding: 60px 26px 35px;
 	border-radius: 5px;
 	position: relative;
 
 	@media (min-width: 768px) {
 		width: 350px;
-		margin: 0;
+		margin: 40px auto;
+	}
+
+	@media (min-width: 1024px) {
+		width: 250px;
 
 		${(props) => {
 			switch (props.number) {
 				case 'first':
-					return 'margin: 0;';
+					return 'margin: 0 auto;';
 				case 'second':
-					return 'margin: 30px 0 0;';
+					return 'margin: 30px auto 0;';
 				case 'third':
-					return 'margin: 60px 0 0;';
+					return 'margin: 60px auto 0;';
 			}
 		}}
+	}
+
+	@media (min-width: 1284px) {
+		width: 300px;
 	}
 `;
 
@@ -137,18 +159,23 @@ export const ImageDiv = styled.div`
 	width: 85px;
 	height: 85px;
 	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
 	top: -18%;
-	left: 38.5%;
+	left: 0;
+	right: 0;
+	text-align: center;
 	border-radius: 50%;
 	border: transparent;
 	background-color: ${(props) => props.theme.darkViolet};
 
-	@media (min-width: 768px) {
+	@media (min-width: 1024px) {
 		width: 80px;
 		height: 80px;
+		margin: 0;
 		position: absolute;
 		top: -15%;
-		left: 8%;
+		left: 10%;
 		border-radius: 50%;
 		border: transparent;
 		background-color: ${(props) => props.theme.darkViolet};
@@ -176,8 +203,12 @@ export const CardHeading = styled.h4`
 	text-transform: capitalize;
 
 	@media (min-width: 768px) {
-		text-align: left;
+		text-align: center;
 		font-size: 20px;
+	}
+
+	@media (min-width: 1024px) {
+		text-align: left;
 	}
 `;
 
@@ -188,7 +219,11 @@ export const CardText = styled.p`
 	font-size: 15px;
 
 	@media (min-width: 768px) {
-		text-align: left;
+		text-align: center;
 		font-size: 16px;
+	}
+
+	@media (min-width: 1024px) {
+		text-align: left;
 	}
 `;

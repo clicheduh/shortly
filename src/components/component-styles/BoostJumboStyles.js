@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 export const Heading = styled.h1`
 	font-weight: 700;
 	color: #fff;
-	font-size: 28px;
+	font-size: 26px;
 	margin: 0 0 25px;
 
 	@media (min-width: 576px) {
@@ -34,7 +34,7 @@ export const Heading = styled.h1`
 
 export const Button = styled.button`
 	padding: 10px 26px;
-	font-size: 18px;
+	font-size: 16px;
 	cursor: pointer;
 	font-weight: 500;
 	color: ${(props) => (props.primary ? '#fff' : props.theme.grayishViolet)};

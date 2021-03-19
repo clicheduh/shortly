@@ -11,7 +11,7 @@ import {
 const ShortenedLinkItem = () => {
 	return (
 		<Wrapper>
-			<Link>https://www.frontendmentor.io</Link>
+			<Link>https://www.frontendmentor.io/fortheloveofgod</Link>
 			<HorizontalLine></HorizontalLine>
 			<RightSide>
 				<ShortenedLink>https://rel.ink/k4lKyk</ShortenedLink>

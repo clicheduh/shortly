@@ -32,6 +32,10 @@ export const Link = styled.p`
 	color: ${(props) => props.theme.darkViolet};
 	font-weight: 500;
 	font-size: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	text-overflow: ellipsis;
 
 	@media (min-width: 768px) {
 		padding: 0 20px;
