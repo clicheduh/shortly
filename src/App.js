@@ -2,7 +2,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AdvStatistics from './components/AdvStatistics';
-import Jumbotron from './components/Jumbotron';
+import BoostJumbo from './components/BoostJumbo';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -10,7 +11,8 @@ function App() {
 			<Navbar />
 			<Hero />
 			<AdvStatistics />
-			<Jumbotron />
+			<BoostJumbo />
+			<Footer />
 		</div>
 	);
 }

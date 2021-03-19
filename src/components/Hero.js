@@ -24,7 +24,7 @@ const Hero = () => {
 						</Heading>
 						<Subheading>
 							Build your brand's recognition and get detailed
-							insights on how links are performing
+							insights on how your links are performing
 						</Subheading>
 						<Button primary>Get Started</Button>
 					</TextWrapper>

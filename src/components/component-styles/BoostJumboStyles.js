@@ -1,4 +1,4 @@
-// This file contains the styles of Jumbotron Component
+// This file contains the styles of BoostJumbo Component
 
 import styled from 'styled-components';
 
@@ -6,18 +6,30 @@ export const Wrapper = styled.div`
 	width: 100%;
 	height: fit-content;
 	text-align: center;
-	padding: 45px 0 50px;
-	background: url(${process.env.PUBLIC_URL + '/images/bg-boost-desktop.svg'}),
+	padding: 63px 0;
+	background: url(${process.env.PUBLIC_URL + '/images/bg-boost-mobile.svg'}),
 		${(props) => props.theme.darkViolet};
-	backgrounf-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
+	background-repeat: no-repeat;
+
+	@media (min-width: 576px) {
+		padding: 45px 0 50px;
+		background: url(${process.env.PUBLIC_URL +
+			'/images/bg-boost-desktop.svg'}),
+			${(props) => props.theme.darkViolet};
+		background-position: center;
+	}
 `;
 
 export const Heading = styled.h1`
 	font-weight: 700;
 	color: #fff;
-	font-size: 32px;
+	font-size: 28px;
 	margin: 0 0 25px;
+
+	@media (min-width: 576px) {
+		font-size: 32px;
+	}
 `;
 
 export const Button = styled.button`

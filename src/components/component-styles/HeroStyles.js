@@ -6,7 +6,7 @@ export const OutWrapper = styled.div`
 	width: 100%;
 	height: fit-content;
 	overflow: hidden;
-	margin: 0 0 100px;
+	margin: 0 0 150px;
 `;
 
 export const Wrapper = styled.div`
@@ -68,7 +68,7 @@ export const Heading = styled.h1`
 	font-size: 8.5vw;
 	line-height: 9.5vw;
 	letter-spacing: -1px;
-	color: ${(props) => props.theme.darkViolet};
+	color: ${(props) => props.theme.veryDarkViolet};
 
 	@media (min-width: 576px) {
 		font-size: 6.5vw;
@@ -118,7 +118,7 @@ export const Button = styled.button`
 	border: 0;
 	border-radius: 40px;
 	text-decoration: none;
-	text-transform: capitalise;
+	text-transform: capitalize;
 
 	&:hover {
 		background-color: ${(props) =>

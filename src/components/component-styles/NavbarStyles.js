@@ -6,6 +6,7 @@ export const NavbarWrapper = styled.nav`
 	max-width: 85%;
 	margin-left: auto;
 	margin-right: auto;
+	padding: 10px 0 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -23,12 +24,13 @@ export const RightWrapper = styled.div`
 	display: inline-flex;
 `;
 
-export const Logo = styled.span`
-	font-size: 28px;
-	color: ${(props) => props.theme.darkViolet};
-	font-weight: 700;
+export const Logo = styled.svg`
 	padding-left: 0 !important;
-	margin-right: 10px;
+	margin: 12px 20px 0 0;
+`;
+
+export const LogoPath = styled.path`
+	fill: ${(props) => props.theme.veryDarkViolet};
 `;
 
 export const Navlink = styled.li`

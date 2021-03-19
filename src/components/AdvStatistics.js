@@ -12,12 +12,14 @@ import {
 	ImageDiv,
 	Line
 } from './component-styles/AdvStatisticsStyles';
+import ShortenLink from './ShortenLink';
 
 const imageRoot = process.env.PUBLIC_URL + '/images';
 
 const AdvStatistics = () => {
 	return (
 		<OuterDiv>
+			<ShortenLink />
 			<Wrapper>
 				<Heading>Advanced Statistics</Heading>
 				<Subheading>

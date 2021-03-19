@@ -6,7 +6,13 @@ export const OuterDiv = styled.div`
 	background-color: ${(props) => props.theme.gray};
 	width: 100%;
 	height: fit-content;
-	padding: 200px 0 100px;
+	padding: 0 0 100px;
+	margin: 500px 0 0;
+
+	@media (min-width: 768px) {
+		height: fit-content;
+		margin: 0;
+	}
 `;
 
 export const Wrapper = styled.div`
