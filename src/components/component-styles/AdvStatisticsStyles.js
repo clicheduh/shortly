@@ -7,7 +7,7 @@ export const OuterDiv = styled.div`
 	width: 100%;
 	height: fit-content;
 	padding: 0 0 100px;
-	margin: 500px 0 0;
+	margin: 700px 0 0;
 
 	@media (min-width: 768px) {
 		height: fit-content;

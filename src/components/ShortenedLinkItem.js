@@ -1,8 +1,8 @@
 import React from 'react';
 import {
 	Wrapper,
-	LeftSide,
 	Link,
+	HorizontalLine,
 	RightSide,
 	ShortenedLink,
 	Button
@@ -12,6 +12,7 @@ const ShortenedLinkItem = () => {
 	return (
 		<Wrapper>
 			<Link>https://www.frontendmentor.io</Link>
+			<HorizontalLine></HorizontalLine>
 			<RightSide>
 				<ShortenedLink>https://rel.ink/k4lKyk</ShortenedLink>
 				<Button primary>Copy</Button>

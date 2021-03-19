@@ -1,11 +1,12 @@
 import React from 'react';
 import {
+	OuterDiv,
 	Wrapper,
 	InputDiv,
 	Input,
 	Button,
 	Warning,
-	OuterDiv
+	WarningMobile
 } from './component-styles/ShortenLinkStyles';
 import ShortenedLinkItem from './ShortenedLinkItem';
 
@@ -15,6 +16,7 @@ const ShortenLink = () => {
 			<Wrapper>
 				<InputDiv>
 					<Input></Input>
+					<WarningMobile>Please add a link</WarningMobile>
 					<Button primary>Shorten it!</Button>
 				</InputDiv>
 				<Warning>Please add a link</Warning>
