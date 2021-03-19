@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const OuterDiv = styled.div`
 	max-width: 85%;
 	height: fit-content;
-	margin: 0 auto 30px;
+	margin: 0 auto -20px;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -14,6 +14,7 @@ export const OuterDiv = styled.div`
 	top: -80px;
 
 	@media (min-width: 768px) {
+		margin: 0 auto 30px;
 		max-width: 75%;
 	}
 `;

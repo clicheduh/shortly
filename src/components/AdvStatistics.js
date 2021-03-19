@@ -5,12 +5,13 @@ import {
 	Heading,
 	Subheading,
 	Cards,
+	Line,
+	MobileLine,
 	Card,
 	CardImage,
 	CardHeading,
 	CardText,
-	ImageDiv,
-	Line
+	ImageDiv
 } from './component-styles/AdvStatisticsStyles';
 import ShortenLink from './ShortenLink';
 
@@ -28,7 +29,8 @@ const AdvStatistics = () => {
 				</Subheading>
 				<Cards>
 					<Line></Line>
-					<Card>
+					<MobileLine></MobileLine>
+					<Card number="first">
 						<ImageDiv>
 							<CardImage
 								src={imageRoot + '/icon-brand-recognition.svg'}
@@ -42,7 +44,7 @@ const AdvStatistics = () => {
 							instil confidence in your content.
 						</CardText>
 					</Card>
-					<Card style={{ margin: '30px 0 0' }}>
+					<Card number="second">
 						<ImageDiv>
 							<CardImage
 								src={imageRoot + '/icon-detailed-records.svg'}
@@ -56,7 +58,7 @@ const AdvStatistics = () => {
 							content helps inform better decisions.
 						</CardText>
 					</Card>
-					<Card style={{ margin: '60px 0 0' }}>
+					<Card number="third">
 						<ImageDiv>
 							<CardImage
 								src={imageRoot + '/icon-fully-customizable.svg'}
