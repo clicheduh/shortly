@@ -16,7 +16,6 @@ const ShortenLink = () => {
 				<InputDiv>
 					<Input></Input>
 					<Button primary>Shorten it!</Button>
-					<br />
 				</InputDiv>
 				<Warning>Please add a link</Warning>
 			</Wrapper>

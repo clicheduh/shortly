@@ -68,7 +68,7 @@ export const Heading = styled.h1`
 	font-size: 8.5vw;
 	line-height: 9.5vw;
 	letter-spacing: -1px;
-	color: ${(props) => props.theme.veryDarkViolet};
+	color: ${(props) => props.theme.veryDarkBlue};
 
 	@media (min-width: 576px) {
 		font-size: 6.5vw;

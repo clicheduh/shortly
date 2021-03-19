@@ -43,7 +43,7 @@ export const Navlink = styled.li`
 	color: ${(props) => props.theme.grayishViolet};
 
 	&:hover {
-		color: ${(props) => props.theme.darkViolet};
+		color: ${(props) => props.theme.veryDarkBlue};
 	}
 `;
 

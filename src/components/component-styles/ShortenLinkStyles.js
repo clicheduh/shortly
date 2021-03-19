@@ -17,7 +17,7 @@ export const OuterDiv = styled.div`
 export const Wrapper = styled.div`
 	width: 100%;
 	margin: 0 0 25px;
-	padding: 50px 0px 25px;
+	padding: 50px 60px 25px;
 	border-radius: 10px;
 	border: transparent;
 	background: url(${process.env.PUBLIC_URL +
@@ -33,19 +33,20 @@ export const InputDiv = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	flex-flow: row;
-	justify-content: center;
+	justify-content: space-between;
 `;
 
 export const Input = styled.input.attrs((props) => ({
 	type: 'text',
 	placeholder: 'Shorten a link here...'
 }))`
-	width: 70%;
+	width: 75%;
 	margin: 0 24px 0 0;
 	border: transparent;
 	border-radius: 10px;
 	padding: 16px 24px;
 	font-weight: 500;
+	flex-grow: 7;
 `;
 
 export const Button = styled.button`
@@ -59,6 +60,7 @@ export const Button = styled.button`
 	border-radius: 10px;
 	text-decoration: none;
 	text-transform: capitalize;
+	flex-grow: 1;
 
 	&:hover {
 		background-color: ${(props) =>
@@ -67,8 +69,7 @@ export const Button = styled.button`
 `;
 
 export const Warning = styled.p`
-	diplay: inline-block;
-	margin: 0 0 0 70px;
+	width: 100%;
 	color: ${(props) => props.theme.red};
 	font-style: italic;
 	font-size: 16px;

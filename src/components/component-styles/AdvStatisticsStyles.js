@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
 
 export const Heading = styled.h1`
 	text-align: center;
-	color: ${(props) => props.theme.darkViolet};
+	color: ${(props) => props.theme.veryDarkBlue};
 	font-weight: 700;
 	margin: 0 auto;
 	font-size: 2rem;
@@ -97,7 +97,7 @@ export const CardImage = styled.img`
 export const CardHeading = styled.h4`
 	text-align: left;
 	margin: 0 0 13px 0;
-	color: ${(props) => props.theme.darkViolet};
+	color: ${(props) => props.theme.veryDarkBlue};
 	font-weight: 700;
 	font-size: 20px;
 	text-transform: capitalize;
