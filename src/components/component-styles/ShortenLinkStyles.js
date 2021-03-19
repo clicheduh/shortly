@@ -25,16 +25,15 @@ export const Wrapper = styled.div`
 	padding: 30px 30px 15px;
 	border-radius: 10px;
 	border: transparent;
-	background: url(${process.env.PUBLIC_URL +
-		'/images/bg-shorten-desktop.svg'}),
+	background: url(${process.env.PUBLIC_URL + '/images/bg-shorten-mobile.svg'}),
 		${(props) => props.theme.darkViolet};
-	background-position: bottom left;
+	background-position: top right;
 	background-repeat: no-repeat;
 
 	@media (min-width: 768px) {
 		padding: 50px 60px 25px;
 		background: url(${process.env.PUBLIC_URL +
-			'/images/bg-shorten-mobile.svg'}),
+			'/images/bg-shorten-desktop.svg'}),
 			${(props) => props.theme.darkViolet};
 		background-position: center;
 	}
