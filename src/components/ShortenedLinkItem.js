@@ -8,13 +8,15 @@ import {
 	Button
 } from './component-styles/ShortenedLinkItemStyles';
 
-const ShortenedLinkItem = () => {
+const ShortenedLinkItem = (props) => {
+	const { myData } = props;
+
 	return (
 		<Wrapper>
-			<Link>https://www.frontendmentor.io/fortheloveofgod</Link>
+			<Link>{myData.link}</Link>
 			<HorizontalLine></HorizontalLine>
 			<RightSide>
-				<ShortenedLink>https://rel.ink/k4lKyk</ShortenedLink>
+				<ShortenedLink>{myData.short_link}</ShortenedLink>
 				<Button primary>Copy</Button>
 			</RightSide>
 		</Wrapper>
