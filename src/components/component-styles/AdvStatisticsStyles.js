@@ -146,6 +146,8 @@ export const Card = styled.div`
 					return 'margin: 30px auto 0;';
 				case 'third':
 					return 'margin: 60px auto 0;';
+				default:
+					return;
 			}
 		}}
 	}

@@ -65,3 +65,7 @@ export const Button = styled.button`
 			props.primary ? props.theme.lightCyan : '#fff'};
 	}
 `;
+
+export const Anchor = styled.a``;
+
+export const Hamburger = styled.i``;

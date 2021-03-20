@@ -13,11 +13,20 @@ const ShortenedLinkItem = (props) => {
 
 	return (
 		<Wrapper>
-			<Link>{myData.result.original_link}</Link>
+			<Link>{myData ? myData.result.original_link : null}</Link>
 			<HorizontalLine></HorizontalLine>
 			<RightSide>
-				<ShortenedLink>{myData.result.short_link}</ShortenedLink>
-				<Button primary>Copy</Button>
+				<ShortenedLink>
+					{myData ? myData.result.short_link : null}
+				</ShortenedLink>
+				<Button
+					primary
+					onClick={() => {
+						navigator.clipboard.writeText(myData.result.short_link);
+					}}
+				>
+					Copy
+				</Button>
 			</RightSide>
 		</Wrapper>
 	);

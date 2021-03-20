@@ -6,7 +6,9 @@ import {
 	Navlink,
 	Logo,
 	LogoPath,
-	Button
+	Button,
+	Anchor,
+	Hamburger
 } from './component-styles/NavbarStyles';
 import '../css/navbarStyles.css';
 
@@ -49,16 +51,16 @@ const Navbar = () => {
 					Sign Up
 				</Button>
 			</RightWrapper>
-			<a
+			<Anchor
 				href="javascript:void(0);"
 				className="icon"
 				onclick="myFunction()"
 			>
-				<i
+				<Hamburger
 					className="fa fa-bars"
 					style={{ color: '#9e9aa7', margin: '5px 0' }}
-				></i>
-			</a>
+				></Hamburger>
+			</Anchor>
 		</NavbarWrapper>
 	);
 };

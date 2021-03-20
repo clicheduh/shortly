@@ -13,41 +13,47 @@ import {
 import ShortenedLinkItem from './ShortenedLinkItem';
 
 const ShortenLink = () => {
-	let baseUrl =
-		'https://api.shrtco.de/v2/shorten?url=https://github.com/VedantBang/ArtsnDecoWebsite';
+	let baseUrl = 'https://api.shrtco.de/v2/shorten?url=';
 	const [myData, setData] = useState(null);
-	const [clickChecker, changeClickState] = useState(false);
+	const [link, setLink] = useState(null);
+	const [loader, setLoader] = useState(false);
+	const [array, setArray] = useState([]);
 
-	// working
-	// const changeHandler = (e) => {
-	// 	setData({
-	// 		...myData,
-	// 		[e.target.name]: e.target.value
-	// 	});
-	// };
+	const changeHandler = (e) => {
+		setLink(e.target.value);
+	};
 
-	useEffect(() => {
-		axios.get(baseUrl).then((res) => {
+	const clickHandler = () => {
+		console.log(link);
+		setLoader(true);
+		axios.get(baseUrl + link).then((res) => {
 			setData(res.data);
+			console.log(res.data);
+
+			setArray((prevArr) => [...prevArr, res.data]);
+			setLoader(false);
 		});
-	}, [baseUrl]);
+	};
 
-	let content = null;
+	console.log(array);
 
-	if (myData) {
-		content = <ShortenedLinkItem myData={myData} />;
-	} else {
-		content = <Loader></Loader>;
-	}
+	let content = array ? (
+		array.map((item) => {
+			return <ShortenedLinkItem myData={item}></ShortenedLinkItem>;
+		})
+	) : loader ? (
+		<Loader></Loader>
+	) : null;
 
 	return (
 		<OuterDiv>
 			<Wrapper>
 				<InputDiv>
-					<Input name="link"></Input>
-					{/* <Input name="link"></Input> */}
+					<Input name="link" onChange={changeHandler}></Input>
 					<WarningMobile>Please add a link</WarningMobile>
-					<Button primary>Shorten it!</Button>
+					<Button primary onClick={clickHandler}>
+						Shorten it!
+					</Button>
 				</InputDiv>
 				<Warning>Please add a link</Warning>
 			</Wrapper>

@@ -14,8 +14,6 @@ import {
 	SocialPath
 } from './component-styles/FooterStyles';
 
-const imageRoot = process.env.PUBLIC_URL + '/images';
-
 const Footer = () => {
 	return (
 		<OuterDiv>
