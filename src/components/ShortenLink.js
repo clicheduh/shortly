@@ -15,49 +15,39 @@ import ShortenedLinkItem from './ShortenedLinkItem';
 const ShortenLink = () => {
 	let baseUrl =
 		'https://api.shrtco.de/v2/shorten?url=https://github.com/VedantBang/ArtsnDecoWebsite';
-	const [myData, setData] = useState({
-		link: '',
-		shortlink: ''
-	});
+	const [myData, setData] = useState(null);
+	const [clickChecker, changeClickState] = useState(false);
 
 	// working
-	const changeHandler = (e) => {
-		setData({
-			...myData,
-			[e.target.name]: e.target.value
-		});
-	};
-
-	const clickHandler = () => {
-		console.log(myData);
-	};
+	// const changeHandler = (e) => {
+	// 	setData({
+	// 		...myData,
+	// 		[e.target.name]: e.target.value
+	// 	});
+	// };
 
 	useEffect(() => {
 		axios.get(baseUrl).then((res) => {
-			setData({
-				...myData,
-				shortlink: res.data.result.short_link
-			});
-			console.log(res);
+			setData(res.data);
 		});
-	}, [myData.link]);
+	}, [baseUrl]);
 
 	let content = null;
 
-	if (myData.link) {
+	if (myData) {
 		content = <ShortenedLinkItem myData={myData} />;
+	} else {
+		content = <Loader></Loader>;
 	}
 
 	return (
 		<OuterDiv>
 			<Wrapper>
 				<InputDiv>
-					<Input onChange={changeHandler} name="link"></Input>
+					<Input name="link"></Input>
 					{/* <Input name="link"></Input> */}
 					<WarningMobile>Please add a link</WarningMobile>
-					<Button primary onClick={clickHandler}>
-						Shorten it!
-					</Button>
+					<Button primary>Shorten it!</Button>
 				</InputDiv>
 				<Warning>Please add a link</Warning>
 			</Wrapper>

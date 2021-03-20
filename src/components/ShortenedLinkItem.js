@@ -13,10 +13,10 @@ const ShortenedLinkItem = (props) => {
 
 	return (
 		<Wrapper>
-			<Link>{myData.link}</Link>
+			<Link>{myData.result.original_link}</Link>
 			<HorizontalLine></HorizontalLine>
 			<RightSide>
-				<ShortenedLink>{myData.short_link}</ShortenedLink>
+				<ShortenedLink>{myData.result.short_link}</ShortenedLink>
 				<Button primary>Copy</Button>
 			</RightSide>
 		</Wrapper>
